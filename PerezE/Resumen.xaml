@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerezE.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbusuario" HorizontalTextAlignment="End"/>
+
+            <Grid Margin="5,5,5,5" BackgroundColor="Orange" RowSpacing="0.1" ColumnSpacing="5">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="2" Grid.Row="0" Text="DATOS DEL ALUMNO" HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Nombre: "/>
+                <Entry x:Name="Nombre" Grid.Column="1" Grid.Row="1" IsReadOnly="True"/>
+
+                <Label Grid.Column="0" Grid.Row="2" Text="Monto Total a pagar es: "/>
+                <Entry x:Name="Tpagar" Grid.Column="1" Grid.Row="2" Keyboard="Numeric" IsReadOnly="True"/>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

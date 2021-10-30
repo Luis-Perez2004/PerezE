@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerezE.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbusuario" HorizontalTextAlignment="End"/>
+            
+            <Grid Margin="5,5,5,5" BackgroundColor="Orange" RowSpacing="0.1" ColumnSpacing="5">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+                <Label Grid.ColumnSpan="2" Grid.Row="0" Text="Datos del alumno"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Ingrese el nombre: "/>
+                <Entry x:Name="Nombre" Grid.Column="1" Grid.Row="1"/>
+
+                <Label Grid.Column="0" Grid.Row="2" Text="Monto inicial: "/>
+                <Entry x:Name="VI" Grid.Column="1" Grid.Row="2" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="3" Text="Pago mensual: "/>
+                <Entry x:Name="PM" Grid.Column="1" Grid.Row="3" IsReadOnly="True"/>
+                <Button Grid.Column="2" Grid.Row="3" x:Name="btnCalcular" Text="Calcular" BackgroundColor="LightGreen" Clicked="btnCalcular_Clicked"/>
+
+            </Grid>
+            <Button x:Name="btnGuardar" Text="Guardar" BackgroundColor="LightGreen" Clicked="btnGuardar_Clicked"/>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
